@@ -62,9 +62,9 @@ export default function Home() {
                 key={1}
                 title={"NFTs"}
                 data={[
-                  { item: "NFT Items", value: 187 },
-                  { item: "NFT Items", value: 187 },
-                  { item: "NFT Items", value: 187 },
+                  { item: "NFT items", value: 187 },
+                  { item: "Collections", value: 5 },
+                  { item: "Minted", value: 39 },
                 ]}
               />
               <OverviewBox
