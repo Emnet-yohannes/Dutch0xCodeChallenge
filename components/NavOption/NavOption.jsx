@@ -1,16 +1,15 @@
 import React from "react";
 
-const NavOption = ({ backgroundColor , icon , label }) => {
+const  NavOption = ({ backgroundColor, icon, label }) => {
   return (
-    <div className={` w-full border-2 rounded-md h-[151px] `}>
+    <div className={` w-full h-[209px] `}>
       <div
-        className={` w-full h-full flex justify-center items-center `}
-        style={{backgroundColor:`${backgroundColor}`, opacity:"80%"}}
+        className={` w-full h-[151px] flex justify-center rounded-lg items-center `}
+        style={{ backgroundColor: `${backgroundColor}`, opacity: "80%" }}
       >
         {icon}
-
       </div>
-      <div className="flex justify-center font-bold text-[16px] pt-2 pb-6">
+      <div className="flex h-[24px] justify-center font-bold text-[16px] pt-2 pb-6">
         {label}
       </div>
     </div>

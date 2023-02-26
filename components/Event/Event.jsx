@@ -1,12 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import ManureNft from "../../public/images/manureNft.png";
-import waterNft from "../../public/images/waterNft.png";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
-import CircularProgressBar from "../CircularProgressBar/CircularProgressBar";
 import Clock from "../icons/Clock";
 import Occasion from "../icons/Occasion";
-
+import ProgressEllipse from "../icons/ProgressEllippse";
+import SuccessEllipse from "../icons/SuccessEllipse";
 const Event = ({
   date,
   Name,
@@ -21,13 +19,13 @@ const Event = ({
     <div className="flex justify-between py-4 space-y bg-white border-[1px] rounded-lg">
       <div className="space-y-2">
       <div className="flex space-x-2">
-        {/* <CircularProgressBar progress={1}  /> */}
-        <div className="bg-[#3CAA2A]  pl-4 pr-1 rounded-r-md text-[12px] font-bold text-white"> 
-
+        <div className={`flex items-center pl-4 pr-1 rounded-r-md  font-bold text-white  ${progress< 100 ? 'text-[12px] bg-[#3CAA2A]':'text-[12px] bg-[#28458F]'}`}> 
+        {progress<100 ? <ProgressEllipse className="fill-[#77c36a]" /> : <SuccessEllipse />}
+        &nbsp;
         AirDrop
         </div>
         <div className="flex items-center space-x-2">
-            <div className="flex items-center bg-[#0000001A] space-x-2">
+            <div className="flex items-center bg-[#0000001A] space-x-2 px-2 rounded-md">
                 <Occasion />
                 <h1 className="text-[14] font-bold">
                 {occasion}
@@ -46,7 +44,7 @@ const Event = ({
             </div>
         </div>
       </div>
-        <div className="px-4 space-y-3">
+        <div className="px-4">
           <div>🍎🍌🍍The Fruit Salad Game🍆🥦🥕</div>
           <div className="flex items-center">
             <h1 className="text-[30px] font-bold text-black">{Name}</h1>
@@ -60,7 +58,7 @@ const Event = ({
             <div className="text-[14px] font-bold flex"> &nbsp; {failedTransaction} &nbsp;  <h1 className="font-normal">failed</h1></div>
           </div>
           <div>
-            <ProgressBar maxValue={100} value={progress} />
+            <ProgressBar maxValue={100} value={progress}  />
           </div>
           <div className="flex space-x-4">
             <button className="border-2 bg-black rounded-md border-black p-2 text-white">
