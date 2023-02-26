@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Manrope, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ /* width */
+ ::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  width: 8px;
+  border: none;
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  /* background-image: linear-gradient(to top right, #782acd, #6e27bf, #6425b2, #5a22a4, #511f97, #3c319c, #253d9e, #00469d, #005b) */
+  border: 2px solid #888;
+  ;
+  border-radius: 5px;
+}
+@layer utilities {
+  .backgroundGradient1{
+    background: radial-gradient(72.76% 61.08% at 94.03% 7.28% , rgba(83, 80, 233, 0.3) 0%, rgba(252, 54, 76, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+filter: drop-shadow(0px 30px 30px rgba(0, 0, 0, 0.25));
+
+  }
+
+  .toolbar_gradient {
+    /* background: linear-gradient(225deg, #012b9e 0%, #00E3AE 100%); */
+    background: rgb(0, 31, 118);
+    background: linear-gradient(184deg, rgba(0, 31, 118, 1) 0%, rgba(9, 57, 144, 1) 14%, rgba(3, 134, 203, 1) 39%, rgba(0, 227, 174, 1) 98%);
+  }
+
+  .toolbar_gradient_white {
+    color: white;
+  }
+
+  .text_background_gradient {
+    /* background: linear-gradient(5deg, #012b9c 0%, #00E3AE 100%); */
+    background: rgb(0, 31, 118);
+    background: linear-gradient(184deg, rgba(0, 31, 118, 1) 0%, rgba(9, 57, 144, 1) 14%, rgba(3, 134, 203, 1) 39%, rgba(0, 227, 174, 1) 98%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .node_background_box_gradient {
+    background: linear-gradient(-25deg, #001F76 0%, #00E3AE 100%);
+    border-radius: 20px;
+  }
+
+  .node_background_box_white {
+    background: white;
+    border-radius: 20px;
+  }
+
+  .node_background_box_none {
+    background: transparent;
+    border-radius: 20px;
+  }
+
+  .text_background_box {
+    background: linear-gradient(-25deg, #001F76 0%, #00E3AE 100%);
+    border-radius: 20px;
+  }
+
+  .text_background_box_reversed {
+    background: linear-gradient(-25deg, #00E3AE 0%, #001F76 100%);
+    border-radius: 20px;
+  }
+}
